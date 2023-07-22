@@ -1,5 +1,5 @@
 # IPTables-Subnet Action configuration file
-# 
+#
 # Taken from Fail22Ban configuration file "iptables-allports.conf"
 #    Author: Cyril Jaquier
 #    Modified: Yaroslav O. Halchenko <debian@onerussian.com>
@@ -11,7 +11,7 @@
 
 [INCLUDES]
 
-before = iptables-common.conf
+before = iptables.conf
 
 
 [Definition]
@@ -56,3 +56,4 @@ actionunban = <iptables> -D f2b-<name> -s <ip>/24 -j <blocktype>
 
 [Init]
 
+chain = INPUT
